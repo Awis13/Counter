@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var timer = Timer()
     var selectedTime = 10
     let secondsArray = [10, 15, 20, 30, 60]
-
+// MARK: Picker settings
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -57,7 +57,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         
     }
-    
+// MARK: Updating a timer.
     @objc func updateCounter() {
        
         if selectedTime > 0 {
